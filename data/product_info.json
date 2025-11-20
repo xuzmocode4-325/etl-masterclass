@@ -1,0 +1,20 @@
+[
+    {
+        "product_id": "P1001",
+        "product_name": "Wireless Headphones",
+        "category": "Electronics",
+        "price": 50.00
+    },
+    {
+        "product_id": "P1002",
+        "product_name": "Bluetooth Speaker",
+        "category": "Electronics",
+        "price": 60.00
+    },
+    {
+        "product_id": "P1003",
+        "product_name": "Coffee Maker",
+        "category": "Home Appliances",
+        "price": 75.00
+    }
+]

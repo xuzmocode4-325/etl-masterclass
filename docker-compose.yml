@@ -1,0 +1,19 @@
+
+services:
+  airflow:
+    build: .
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/home/airflow/dags
+      - ./logs:/home/airflow/logs
+      - ./plugins:/home/airflow/plugins
+      - ./data:/home/airflow/data
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - DATA_PATH=data
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:////home/airflow/airflow.db\
+      - AIRFLOW_HOME=/home/airflow
+    command: airflow db migrate && airflow api-server
