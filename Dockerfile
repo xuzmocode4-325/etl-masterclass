@@ -7,6 +7,7 @@ ENV PYTHON_VERSION=3.10
 ENV CONSTRAINT_URL=https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt
 
 # Install Airflow with Celery extra and constraints for reproducible install
+COPY 
 RUN pip install "apache-airflow[celery]==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
 
 # Create Airflow user and directories
